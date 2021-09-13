@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Maze Generator by michaelshumshum</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script>
+    function saveMaze() {
+      html2canvas(document.getElementById('maze-box')).then(function(canvas) {
+        let url = canvas.toDataURL('image/png');
+        let dl = document.getElementById('img-dl')
+        dl.href = url
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div id='input-box'>
+    <h>Maze Generator</h>
+    <h4>by michaelshumshum</h4>
+    <div id='dimensions'>
+      <label>Height</label>
+      <input id='height' type='text'>
+      <label>Width</label>
+      <input id='width' type='text'>
+    </div>
+    <button onclick='try{generateMaze()} catch {};saveMaze()'>Generate maze</button>
+    <button id='solution-btn' onclick='showSolution()'>Show solution</button>
+    <a id='img-dl' href='' download>Save maze as image</a>
+  </div>
+  <h4 id='alert'></h4>
+  <div id='maze-box'>
+    <div id='grid'>
+    </div>
+  </div>
+</body>

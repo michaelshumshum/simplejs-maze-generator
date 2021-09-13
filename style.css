@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+body {
+  background: #222222;
+}
+
+#input-box {
+  margin: 0 auto;
+  padding: 25px;
+  width: 60%;
+}
+
+h {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+h4 {
+  text-align: center;
+}
+
+#dimensions {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dimensions input, #dimensions label {
+  margin: 10px;
+}
+
+button, a {
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #33374d;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  transition: 75ms background-color linear;
+}
+
+button:hover, a:hover {
+  cursor: pointer;
+  background: #573ca4
+}
+
+button:active, a:active {
+  background: #3f258a
+}
+
+input {
+  padding: 10px;
+  display: inline-block;
+  max-width: 100%;
+  background: #33374d;
+  border: none;
+  border-radius: 10px;
+}
+
+:focus {
+  outline: none;
+}
+
+#grid {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#maze-box {
+  margin: auto;
+  width: 50%;
+}
+
+.grid-item {
+  display: block;
+  padding: 5px;
+  background: white;
+}
